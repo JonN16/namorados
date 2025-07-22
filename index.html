@@ -334,9 +334,7 @@
 
         <div class="photo-container">
             <div class="main-photo pulse" id="mainPhoto">
-                <div class="main-photo pulse" id="mainPhoto">
-    <img src="musica/amor.jpg" alt="Nossa foto especial" class="uploaded-photo">
-</div>
+                <img src="musica/amor.jpg" alt="Nossa foto especial" class="uploaded-photo">
             </div>
             <input type="file" id="photoInput" accept="image/*">
         </div>
@@ -374,7 +372,7 @@
             <h2 class="memories-title">Nossas Memórias Especiais 📝</h2>
             
             <div class="memory-item">
-                <div class="memory-date">23 de Dezembro</div>
+                <div class="memory-date">07 de Março</div>
                 <div class="memory-text">O dia mais especial - quando pedi você em namoro! Meu coração nunca bateu tão forte meu nono 💜</div>
             </div>
         </div>
@@ -416,30 +414,20 @@
             }
         });
 
-        // Atualizar contador (exemplo com 1 ano de relacionamento)
-function updateCountdown() {
-    const startDate = new Date("2023-12-23T00:00:00"); // data real do relacionamento
-    const now = new Date();
-    const diff = now - startDate;
+        // Atualizar contador (exemplo com data de 07/03/2024)
+        function updateCountdown() {
+            const startDate = new Date("2024-03-07T00:00:00"); // data atualizada do relacionamento
+            const now = new Date();
+            const diff = now - startDate;
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor(diff / (1000 * 60));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor(diff / (1000 * 60));
 
-    document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = hours.toLocaleString();
-    document.getElementById('minutes').textContent = minutes.toLocaleString();
-}
-
-        // Função para abrir música - não precisa mais desta função
-        // function openMusic() {
-        //     const url = document.getElementById('musicUrl').value;
-        //     if (url) {
-        //         window.open(url, '_blank');
-        //     } else {
-        //         alert('Por favor, cole o link da música primeiro!');
-        //     }
-        // }
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toLocaleString();
+            document.getElementById('minutes').textContent = minutes.toLocaleString();
+        }
 
         updateCountdown();
         setInterval(updateCountdown, 60000); // Atualiza a cada minuto
